@@ -1,0 +1,62 @@
+body {
+  background-color: #3498db;
+}
+
+li {
+  list-style-type: none;
+  padding: 3px;
+  border-radius: 5px;
+}
+
+ul > li:last-child:hover {
+  background-color: darkorchid;
+  color: darkred;
+  cursor: pointer;
+}
+
+ul {
+  padding-inline-start: 5px;
+}
+
+div > ul > li {
+  width: 50%;
+  padding: 10px;
+  margin: 10px auto;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #ffffff;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+ul > li:nth-child(even) {
+  background-color: #f0f0f0;
+}
+
+div > ul > li:first-child {
+  border-left: 3px solid #e74c3c;
+}
+
+div > ul > li > ul > li {
+  font-style: italic;
+  border-left: 3px solid #f39c12;
+}
+
+div > ul > li > ul > li:first-child > ul > li {
+  border-left: 3px solid #f39c12;
+  margin-bottom: 5px;
+}
+
+div > ul > li > ul > li:last-child {
+  margin-top: 5px;
+  border-left: 3px solid #e74c3c;
+}
+
+div > ul > li > ul > li:last-child > ul > li:first-child {
+  background-color: #ffffff;
+}
+
+li > ul > li > ul > li {
+  font-weight: normal;
+  border-left: 3px solid #f39c12;
+  margin-bottom: 5px;
+}

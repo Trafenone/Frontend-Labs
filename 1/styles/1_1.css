@@ -1,0 +1,39 @@
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 24px;
+}
+
+input[type="radio"] {
+  display: none;
+}
+
+label {
+  display: flex;
+  flex-direction: column;
+  background-color: #000;
+  color: white;
+  cursor: pointer;
+}
+
+label p {
+    padding: 10px;
+}
+
+label:hover {
+  background-color: #f96743;
+}
+
+div {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+label input[type="radio"]:checked + p + div {
+  background-color: #f8f9fa;
+  color: #000;
+  max-height: 1000px;
+  padding: 10px;
+}
