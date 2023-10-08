@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="wrapper">
+      <div>
+        <input
+          onfocus="focusHandler(event)"
+          onblur="blurHandler(event)"
+          type="text"
+          placeholder="login"
+        />
+      </div>
+      <div>
+        <input
+          onfocus="focusHandler(event)"
+          onblur="blurHandler(event)"
+          type="password"
+          placeholder="password"
+        />
+      </div>
+      <div>
+        <textarea
+          onfocus="focusHandler(event)"
+          onblur="blurHandler(event)"
+          placeholder="description"
+        ></textarea>
+      </div>
+    </div>
+  </body>
+</html>

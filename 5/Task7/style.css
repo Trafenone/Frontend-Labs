@@ -1,0 +1,23 @@
+body {
+    display: flex;
+    justify-content: space-between;
+}
+
+body div {
+    margin-top: 5%;
+}
+
+.figure {
+    display: inline-block;
+    background-color: cornflowerblue;
+    border: 1px solid blue;
+}
+
+.inputs {
+    display: flex;
+    flex-direction: column;
+}
+
+span {
+    border: 1px solid black;
+}

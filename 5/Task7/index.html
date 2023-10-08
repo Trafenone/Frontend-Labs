@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div class="inputs">
+        <label>width:<input onchange="widthChange(event)" type="range" min="0" max="500" step="1" value="0"/><span class="width"></span></label>
+        <label>height:<input onchange="heightChange(event)" type="range" min="0" max="500" step="1" value="0"/><span class="height"></span></label>
+        <label>rotate:<input onchange="rotateChange(event)" type="range" min="0" max="360" step="1" value="0"/><span class="rotate"></span></label>
+      </div>
+    <div>
+        <div class="figure"></div>
+    </div>
+  </body>
+</html>

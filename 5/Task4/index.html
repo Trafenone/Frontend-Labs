@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <script defer src="script.js"></script>
+    <style>
+        div {
+            margin: 10px 0;
+        }
+        .game__task {
+            display: inline;
+        }
+    </style>
+  </head>
+  <body>
+    <div class="statistics"></div>
+    <button onclick="nextTask()">Наступне завдання</button>
+    <div class="game">
+      <div class="game__task"></div>
+      <input class="game__answer" type="text" />
+      <button class="game__check" onclick="clickHandler(this)">Перевірити</button>
+    </div>
+    <div class="label-result"></div>
+  </body>
+</html>

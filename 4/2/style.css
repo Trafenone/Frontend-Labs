@@ -1,0 +1,38 @@
+body {
+  background-color: #1e4c88;
+}
+
+.accordion-item {
+  border: 1px solid #ccc;
+  margin-bottom: 10px;
+}
+
+.accordion-item-header {
+  padding: 0 10px;
+  cursor: pointer;
+  background-color: #f0f0f0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.accordion-item-header .icon {
+  background-size: contain;
+  background-position: center;
+  width: 30px;
+  height: 30px;
+}
+
+.plus {
+  background-image: url("images/plus.png");
+}
+
+.minus {
+  background-image: url("images/minus.png");
+}
+
+.accordion-item-content {
+  padding: 10px;
+  background-color: #f0f0f0;
+  display: none;
+}

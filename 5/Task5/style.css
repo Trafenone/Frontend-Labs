@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+.wrapper {
+  width: 50%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.box {
+  border: 2px solid #3122f6;
+  padding: 1em;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  height: 150px;
+  width: 100%;
+}
+
+.active {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+.inactive {
+  filter: grayscale(100%);
+  opacity: 0.5;
+}
