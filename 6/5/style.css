@@ -1,0 +1,32 @@
+body {
+  display: flex;
+  justify-content: space-between;
+}
+
+#palette {
+  border: 3px dotted black;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+#palette td {
+  border: 1px dotted white;
+  height: 150px;
+  width: 150px;
+}
+
+#canvas {
+  border: 3px solid black;
+  border-collapse: separate;
+  border-spacing: 0;
+}
+
+#canvas td {
+  border: 1px solid black;
+  height: 50px;
+  width: 50px;
+}
+
+.active {
+  border: 5px solid #0a0947 !important;
+}

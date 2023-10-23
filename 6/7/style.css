@@ -1,0 +1,26 @@
+.post {
+    border: 1px solid black;
+    margin-bottom: 10px;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    padding: 5px;
+}
+
+.content {
+    border-top: 2px solid black;
+    word-wrap: break-word;
+    padding: 5px;
+}
+
+.form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+input, textarea {
+    width: 100%;
+}

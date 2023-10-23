@@ -1,0 +1,38 @@
+.post {
+    width: 500px;
+    min-height: 100px;
+    padding: 25px;
+    margin-bottom: 10px;
+    background-color: rgb(87, 165, 243);
+    border-radius: 5px;
+}
+
+.post__text {
+    margin-top: 10px;
+}
+
+p {
+    width: 100%;
+    overflow: auto;
+}
+
+textarea {
+    width: 100%;
+    min-height: 100px;
+}
+
+button {
+  width: 25px;
+  height: 25px;
+  cursor: pointer;
+}
+
+.remove {
+  background-image: url(images/free-icon-delete-1214428.png);
+  background-size: cover;
+}
+
+.edit {
+  background-image: url(images/free-icon-edit-tools-9801073.png);
+  background-size: cover;
+}

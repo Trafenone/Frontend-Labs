@@ -1,0 +1,30 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: space-between;
+}
+
+#rectangle {
+  width: 550px;
+  height: 450px;
+  border: 1px solid black;
+}
+
+#palette {
+  border: 3px dotted black;
+  border-spacing: 0;
+  border-collapse: separate;
+}
+
+#palette td {
+  border: 1px dotted white;
+  height: 150px;
+  width: 150px;
+}
+
+.active {
+  border: 5px solid #0a0947 !important;
+}

@@ -1,0 +1,40 @@
+body {
+    display: flex;
+    justify-content: center;
+}
+
+.card {
+    width: 300px;
+    height: 350px;
+    perspective: 1000px;
+}
+
+.card-inner {
+    width: 100%;
+    height: 100%;
+    transform-style: preserve-3d;
+    transition: transform 1s;
+}
+
+.card:hover .card-inner {
+    transform: rotateY(180deg);
+}
+
+.card-front,
+.card-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.card-front {
+    background-image: url("images/8cxrbGE6i.jpg");
+}
+
+.card-back {
+    background-image: url("images/pngwing.com.png");
+    transform: rotateY(180deg);
+}
