@@ -1,0 +1,23 @@
+body {
+    box-sizing: border-box;
+    overflow: hidden;
+}
+
+.block {
+    width: 50px;
+    height: 50px;
+    background-color: brown;
+    position: absolute;
+}
+
+#block1 {
+    background-color: blueviolet;
+}
+
+#block2 {
+    background-color: chocolate;
+}
+
+#block3 {
+    background-color: cornflowerblue;
+}

@@ -1,0 +1,14 @@
+.slideshow-container {
+  max-width: 600px;
+  min-height: 450px;
+  position: relative;
+  margin: auto;
+}
+
+.slideshow-container img {
+  width: 100%;
+  height: auto;
+  position: absolute;
+  opacity: 0;
+  transition: opacity 1s ease-in-out;
+}

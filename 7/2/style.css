@@ -1,0 +1,9 @@
+.circle {
+    border-radius: 50%;
+    position: absolute;
+    cursor: pointer;
+}
+
+.active {
+    border: 2px solid black;
+}
