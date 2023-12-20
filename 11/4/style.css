@@ -1,0 +1,45 @@
+* {
+  box-sizing: border-box;
+}
+
+#info {
+  padding: 20px;
+  margin-bottom: 20px;
+  position: relative;
+}
+
+#timer {
+  color: red;
+  position: absolute;
+  background-color: black;
+}
+
+#position {
+  right: 5%;
+  color: blue;
+  position: absolute;
+}
+
+#container {
+  width: 100% !important;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  position: relative;
+}
+
+#container:fullscreen {
+  background-color: darkblue;
+}
+
+#closeScreen {
+  top: 45%;
+  left: 45%;
+  display: none;
+  padding: 20px;
+  font-weight: bold;
+  position: absolute;
+  color: whitesmoke;
+  border: 3px solid whitesmoke;
+  background-color: rgba(0, 0, 0, 0);
+}
