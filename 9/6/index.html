@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <style>
+      .notification {
+        position: fixed;
+        top: 10px;
+        right: 10px;
+        padding: 10px;
+        border-radius: 5px;
+        font-size: 16px;
+        color: #fff;
+        width: 250px;
+      }
+
+      .success {
+        background-color: #4caf50;
+      }
+
+      .error {
+        background-color: #f44336;
+      }
+    </style>
+  </head>
+  <body>
+    <button onclick="showSuccessNotification()">
+      Показати успішне сповіщення
+    </button>
+    <button onclick="showErrorNotification()">
+      Показати помилкове сповіщення
+    </button>
+    <script>
+      class Notification {
+        constructor(message, style) {
+          this.message = message;
+          this.style = style;
+          this.createNotification();
+        }
+
+        createNotification() {
+          this.notificationElement = document.createElement("div");
+          this.notificationElement.textContent = this.message;
+          this.notificationElement.classList.add("notification", this.style);
+          document.body.appendChild(this.notificationElement);
+
+          setTimeout(() => this.closeNotification(), 3000);
+        }
+
+        closeNotification() {
+          this.notificationElement.remove();
+        }
+      }
+
+      function showSuccessNotification() {
+        new Notification("Операція успішна!", "success");
+      }
+
+      function showErrorNotification() {
+        new Notification("Помилка! Щось пішло не так.", "error");
+      }
+    </script>
+  </body>
+</html>

@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="myForm"></div>
+    <script>
+      class Form {
+        constructor(formId) {
+          this.form = document.getElementById(formId);
+          this.fields = [];
+
+          if (!this.form) {
+            console.error(`Form with id '${formId}' not found.`);
+            return;
+          }
+
+          this.form.addEventListener("submit", this.onSubmit.bind(this));
+        }
+
+        addInputField(type, name, label) {
+          const inputField = document.createElement("input");
+          inputField.type = type;
+          inputField.name = name;
+
+          const labelElement = document.createElement("label");
+          labelElement.textContent = label;
+          labelElement.appendChild(inputField);
+
+          this.fields.push(inputField);
+
+          this.form.appendChild(labelElement);
+        }
+
+        addButton(label, onClick) {
+          const button = document.createElement("button");
+          button.textContent = label;
+          button.addEventListener("click", onClick);
+
+          this.form.appendChild(button);
+        }
+
+        onSubmit(event) {
+          event.preventDefault();
+
+          if (this.validate()) {
+            const formData = {};
+            this.fields.forEach((field) => {
+              formData[field.name] = field.value;
+            });
+            console.log("Form data submitted:", formData);
+          } else {
+            console.log("Form validation failed.");
+          }
+        }
+
+        validate() {
+          let isValid = true;
+
+          this.fields.forEach((field) => {
+            if (!field.value) {
+              console.error(`Field '${field.name}' is required.`);
+              isValid = false;
+            }
+          });
+
+          return isValid;
+        }
+      }
+
+      const myForm = new Form("myForm");
+      myForm.addInputField("text", "username", "Username:");
+      myForm.addInputField("password", "password", "Password:");
+      myForm.addButton("Submit", () => alert("Form submitted!"));
+    </script>
+  </body>
+</html>

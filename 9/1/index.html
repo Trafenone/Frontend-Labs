@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        .modal {
+            display: none;
+            position: fixed;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            padding: 20px;
+            background-color: #fff;
+            border: 1px solid #ccc;
+            z-index: 1000;
+        }
+
+        .modal-header {
+            cursor: move;
+            user-select: none;
+            padding: 10px;
+            background-color: #eee;
+        }
+    </style>
+</head>
+<body>
+
+<button onclick="openModal()">Відкрити модальне вікно</button>
+
+<script>
+    class Modal {
+        constructor() {
+            this.modal = document.createElement('div');
+            this.modal.className = 'modal';
+            this.modal.innerHTML = `
+                <div class="modal-header">Заголовок модального вікна</div>
+                <div class="modal-content"></div>
+            `;
+            document.body.appendChild(this.modal);
+
+            this.isDragging = false;
+            this.offsetX = 0;
+            this.offsetY = 0;
+
+            const header = this.modal.querySelector('.modal-header');
+            header.addEventListener('mousedown', (e) => this.startDrag(e));
+            document.addEventListener('mouseup', () => this.stopDrag());
+            document.addEventListener('mousemove', (e) => this.drag(e));
+        }
+
+        open() {
+            this.modal.style.display = 'block';
+        }
+
+        close() {
+            this.modal.style.display = 'none';
+        }
+
+        setContent(content) {
+            const contentElement = this.modal.querySelector('.modal-content');
+            contentElement.innerHTML = content;
+        }
+
+        startDrag(e) {
+            this.isDragging = true;
+            this.offsetX = e.clientX - this.modal.offsetLeft;
+            this.offsetY = e.clientY - this.modal.offsetTop;
+        }
+
+        stopDrag() {
+            this.isDragging = false;
+        }
+
+        drag(e) {
+            if (this.isDragging) {
+                this.modal.style.left = e.clientX - this.offsetX + 'px';
+                this.modal.style.top = e.clientY - this.offsetY + 'px';
+            }
+        }
+    }
+
+    const modal = new Modal();
+
+    function openModal() {
+        modal.open();
+        modal.setContent('Це вміст модального вікна. Можна переміщати за заголовок.');
+    }
+</script>
+
+</body>
+</html>
